@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin:0;
+            font-family: "Poppins";
+            
+        }
+        main{
+            display:grid;
+            grid-template-columns:1.2fr 1fr 1fr;
+            min-height: 100%;
+        }
+        .panel .text{
+            background: #eeeee7;
+            color:#323230;
+            padding:30px 60px;
+        }
+        .panel{
+            display: grid;
+            grid-template-columns:1fr;
+        }
+        .panel.welcome{
+            background:#323230;
+            padding:30px 60px;
+            grid-auto-rows:1fr;
+        }
+        .panel>img{
+            width:100%;
+            height: 100%;
+        }
+        .panel.welcome nav a{
+            color:#a8a8a8;
+            text-decoration:none;
+            margin-right:20px;
+        }
+        .panel.welcome p{
+            color:#a8a8a8;
+            max-width:540px;
+            line-height: 2em;
+        }
+        .panel.welcome footer{
+            align-self: end;
+        }
+        .panel.about{
+            grid-template-rows:3fr 1fr;
+        
+        }
+        .panel.photos{
+            grid-template-rows:1fr 3fr;
+            
+        }
+
+        @media screen and (max-width:1400px)
+        {
+            main{
+            
+            grid-template-columns:1fr 1fr;
+           
+        }
+
+        .panel.photos{
+            grid-column: span 2;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows:1fr;
+        
+        }
+
+        @media screen and (max-width:960px)
+        {
+            main{
+                grid-template-columns:100%;
+            }
+            .panel.about{
+                grid-row:2;
+                grid-template-columns:1fr 1fr;
+                grid-template-rows:1fr;
+            }
+        }
+        @media screen and (max-width:645px)
+        {
+           
+            .panel.about, .panel.photos{
+                grid-template-columns:1fr;
+            }
+            .panel.photos>img{
+                grid-row:1;
+            }
+        }
+
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="panel welcome">
+            <nav>
+                <a href="/">
+                    Home
+                </a>
+                <a href="/">
+                    Portfolio
+                </a>
+                <a href="/">
+                    Contact
+                </a>
+            </nav>
+            <div>
+                <h1>Monney</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit sed asperiores deleniti corporis qui unde incidunt quaerat at ad blanditiis temporibus quod optio, vel, provident numquam nulla? Ab, ipsam fugiat!
+                </p>
+            </div>
+            <footer>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </footer>
+
+        </div>
+        <div class="panel about">
+            <img src="./Person.jpg" alt="main-pic">
+            <div class="text">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dicta maxime exercitationem.</p>
+            </div>
+        </div>
+        <div class="panel photos">
+            <div class="text">
+                <h2>Photography</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab blanditiis corrupti est?</p>
+            </div>
+            <img src="./Hills.jpg" alt="landscape">
+        </div>
+    </main>
+    
+</body>
+</html>
